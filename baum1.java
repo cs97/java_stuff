@@ -9,7 +9,7 @@ public class baum1 {
 		System.out.println(t.member(10));
 		t.delete(7);
 		System.out.println(t.member(10));
-		t.print(t);
+		t.print();
 	}
 
 }
@@ -28,10 +28,10 @@ class Node {
 	}
 	
 	
-	void print(Node x) {
-		System.out.println(x.get());
-		if(x.l != null) print(x.l);
-		if(x.r != null) print(x.r);
+	void print() {
+		System.out.println(this.get());
+		if(this.l != null) l.print();
+		if(this.r != null) r.print();
 	}
 	
 	boolean member(int x) {
