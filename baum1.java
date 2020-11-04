@@ -1,15 +1,11 @@
-package uni;
-
 public class baum1 {
 
 	public static void main(String[] args) {
-		
+		//test
 		Node t = new Node(null,4,null);
 		t.insert(3);
 		t.insert(7);
 		t.insert(10);
-
-		//System.out.println(t.l.get());
 		System.out.println(t.member(10));
 		t.delete(7);
 		System.out.println(t.member(10));
