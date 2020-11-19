@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
-public class ObjectSave {
+public class WriteObj {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
