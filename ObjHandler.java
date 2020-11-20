@@ -6,7 +6,7 @@ import java.io.ObjectOutputStream;
 
 public class ObjHandler<ET> {
 	
-	ET obj;
+	private ET obj;
 
 	public void save(ET d, String s) {
 		try {
