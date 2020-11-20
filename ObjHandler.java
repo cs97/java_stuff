@@ -8,10 +8,10 @@ public class ObjHandler<ET> {
 
 	public void save(ET d, String s) {
 		try {
-			ET obj = d;
+			//ET obj = d;
 			File datei = new File(s);
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(datei));
-			oos.writeObject(obj);
+			oos.writeObject(d);
 			oos.flush();
 			oos.close();
 		} catch (Exception e){
