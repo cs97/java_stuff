@@ -5,15 +5,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class ObjHandler<ET> {
-	
-	private ET obj;
 
 	public void save(ET d, String s) {
 		try {
-			this.obj = d;
+			ET obj = d;
 			File datei = new File(s);
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(datei));
-			oos.writeObject(this.obj);
+			oos.writeObject(obj);
 			oos.flush();
 			oos.close();
 		} catch (Exception e){
