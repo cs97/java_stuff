@@ -32,4 +32,8 @@ public class ObjHandler<ET> {
 			return null;
 		}
 	}
+	public void delete(String s) {
+		File datei = new File(s);
+		datei.delete();
+	}
 }
