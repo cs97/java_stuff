@@ -5,6 +5,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class ObjHandler<ET> {
+	
 	ET obj;
 
 	public void save(ET d, String s) {
@@ -32,6 +33,7 @@ public class ObjHandler<ET> {
 			return null;
 		}
 	}
+	
 	public void delete(String s) {
 		File datei = new File(s);
 		datei.delete();
