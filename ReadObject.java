@@ -10,7 +10,7 @@ public class ReadObject {
 			File datei = new File("/home/user/obj.dat");
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(datei));
 			Object raw = ois.readObject();
-			SimpleDataObject dataobj = (DataObject) raw;
+			SimpleDataObject dataobj = (SimpleDataObject) raw;
 			
 			System.out.println(dataobj.getString());
 
