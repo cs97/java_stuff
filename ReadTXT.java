@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class DateiSchreiben {
+public class ReadTXT {
 	public static void main(String[] args) {
 		try {
 			File datei = new File("/home/user/test.txt");
