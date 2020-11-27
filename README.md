@@ -6,7 +6,10 @@
 javac *.java
 ```
 ```
-jar cfe FileCipher FileCipher FileCipher.class AESByteCipher.class ByteArrayHandler.class
+jar cfe FileCipher.jar FileCipher FileCipher.class AESByteCipher.class ByteArrayHandler.class
+```
+```
+java -jar FileCipher.jar -enc <file>
 ```
 
 
