@@ -5,11 +5,11 @@ import java.util.Arrays;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-public class aesbytecipher {
+public class AESByteCipher {
 	private static SecretKeySpec secretKey;
 	private static byte[] key;
 
-	public aesbytecipher(String s) {
+	public AESByteCipher(String s) {
 		setKey(s);
 	}
 
