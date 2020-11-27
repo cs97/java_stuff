@@ -6,7 +6,7 @@ public class WriteObj {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		DataObject dataobj = new DataObject("lolig");
+		DataObject dataobj = new SimpleDataObject("weed");
 		try {
 			File datei = new File("/home/user/obj.dat");
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(datei));
