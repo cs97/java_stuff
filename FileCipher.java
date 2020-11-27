@@ -8,13 +8,13 @@ public class FileCipher {
 
 		BufferedReader reader =  new BufferedReader(new InputStreamReader(System.in)); 
 		
-		ArrayHandler bah = new ArrayHandler();
+		ByteArrayHandler bah = new ByteArrayHandler();
 
 		byte[] data;
 		
     		System.out.println("key:");
     	
-		aesbytecipher abc = new aesbytecipher(reader.readLine());
+		AESByteCipher abc = new AESByteCipher(reader.readLine());
 
 		switch(args[0]){
         case "-enc":
