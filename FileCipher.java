@@ -12,7 +12,7 @@ public class RUN {
 
 		byte[] data;
 		
-    System.out.println("key:");
+    		System.out.println("key:");
     	
 		aesbytecipher abc = new aesbytecipher(reader.readLine());
 
