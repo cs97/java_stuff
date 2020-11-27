@@ -1,7 +1,7 @@
 
 import java.io.Serializable;
 
-public class DataObject implements Serializable{
+public class SimpleDataObject implements Serializable{
 	
 	private String string;
 	
