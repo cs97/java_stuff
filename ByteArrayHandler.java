@@ -3,7 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class ArrayHandler {
+public class ByteArrayHandler {
 	public byte[] read(String s) {
 		try {
 			byte[] bytes = Files.readAllBytes(Paths.get(s));
