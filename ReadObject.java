@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
-public class ObjectRead {
+public class ReadObject {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -10,7 +10,7 @@ public class ObjectRead {
 			File datei = new File("/home/user/obj.dat");
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(datei));
 			Object raw = ois.readObject();
-			DataObject dataobj = (DataObject) raw;
+			SimpleDataObject dataobj = (DataObject) raw;
 			
 			System.out.println(dataobj.getString());
 
