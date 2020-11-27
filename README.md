@@ -11,6 +11,8 @@ jar cfe FileCipher.jar FileCipher FileCipher.class AESByteCipher.class ByteArray
 ```
 java -jar FileCipher.jar -enc <file>
 ```
-
+```
+java -jar FileCipher.jar -dec <file>
+```
 
 
