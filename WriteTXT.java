@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-public class DateiSchreiben {
+public class WriteTXT {
 	public static void main(String[] args) {
 		try {
 			File datei = new File("/home/rax/nope.txt");
