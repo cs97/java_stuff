@@ -1,4 +1,3 @@
-package stuff1;
 
 import java.io.Serializable;
 
