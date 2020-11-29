@@ -14,7 +14,7 @@ import javax.crypto.NoSuchPaddingException;
 public class RSAByteCipher {
 	private static KeyPair key = null;
 	public RSAByteCipher() {
-		gen();
+		genkey();
 	}
 	public PublicKey getpubkey() {
 		return key.getPublic();
@@ -26,7 +26,7 @@ public class RSAByteCipher {
 		return decrypt(b, key.getPrivate());
 	}
 	//private
-	private static void gen() {
+	private static void genkey() {
 		KeyPairGenerator keygen = null;
 		try{
 			keygen = KeyPairGenerator.getInstance("RSA");
