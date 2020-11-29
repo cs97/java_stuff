@@ -19,15 +19,13 @@ public class RSAByteCipher {
 	public PublicKey getpubkey() {
 		return key.getPublic();
 	}
-	
 	public byte[] enc(byte[] b, PublicKey pubkey) {
 		return encrypt(b, pubkey);
 	}
-
 	public byte[] dec(byte[] b) {
 		return decrypt(b, key.getPrivate());
 	}
-	
+	//private
 	private static void gen() {
 		KeyPairGenerator keygen = null;
 		try{
@@ -38,7 +36,6 @@ public class RSAByteCipher {
 		keygen.initialize(1024);
 		key = keygen.generateKeyPair();
 	}
-	
 	private static byte[] encrypt(byte[] data, PublicKey pubkey){
 		Cipher cipher = null;
 		try{
@@ -60,7 +57,6 @@ public class RSAByteCipher {
 		}
 		return chiffrat;
 	}
-	
 	private static byte[] decrypt(byte[] data, PrivateKey prvkey){
 		byte[] dec = null;
 		Cipher cipher = null;
