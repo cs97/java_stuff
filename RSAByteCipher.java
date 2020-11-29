@@ -5,18 +5,15 @@ import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
-
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
 
-public class RSAByteArray_v2 {
+public class RSAByteCipher {
 	private static KeyPair key = null;
-
-	
-	public RSAByteArray_v2(){
+	public RSAByteCipher() {
 		gen();
 	}
 	public PublicKey getpubkey() {
@@ -31,75 +28,56 @@ public class RSAByteArray_v2 {
 		return decrypt(b, key.getPrivate());
 	}
 	
-	
-	
 	private static void gen() {
-
 		KeyPairGenerator keygen = null;
-		try
-		{
+		try{
 			keygen = KeyPairGenerator.getInstance("RSA");
-		} catch (NoSuchAlgorithmException e)
-		{
+		} catch (NoSuchAlgorithmException e){
 			e.printStackTrace();
 		}
 		keygen.initialize(1024);
 		key = keygen.generateKeyPair();
 	}
 	
-	private static byte[] encrypt(byte[] data, PublicKey pubkey)
-	{
+	private static byte[] encrypt(byte[] data, PublicKey pubkey){
 		Cipher cipher = null;
-		try
-		{
+		try{
 			cipher = Cipher.getInstance("RSA");
 			cipher.init(Cipher.ENCRYPT_MODE, pubkey);
-		} catch (NoSuchAlgorithmException e)
-		{
+		} catch (NoSuchAlgorithmException e){
 			e.printStackTrace();
-		} catch (NoSuchPaddingException e)
-		{
+		} catch (NoSuchPaddingException e){
 			e.printStackTrace();
-		} catch (InvalidKeyException e)
-		{
+		} catch (InvalidKeyException e){
 			e.printStackTrace();
 		}
 		
 		byte[] chiffrat = null;
-		try
-		{
+		try{
 			chiffrat = cipher.doFinal(data);
-		} catch (IllegalBlockSizeException | BadPaddingException e)
-		{
+		} catch (IllegalBlockSizeException | BadPaddingException e){
 			e.printStackTrace();
 		}
 		return chiffrat;
 	}
 	
-	private static byte[] decrypt(byte[] data, PrivateKey prvkey)
-	{
+	private static byte[] decrypt(byte[] data, PrivateKey prvkey){
 		byte[] dec = null;
 		Cipher cipher = null;
-		try
-		{
+		try{
 			cipher = Cipher.getInstance("RSA");
 			cipher.init(Cipher.DECRYPT_MODE, prvkey);
-		} catch (NoSuchAlgorithmException e1)
-		{
+		} catch (NoSuchAlgorithmException e1){
 			e1.printStackTrace();
-		} catch (NoSuchPaddingException e1)
-		{
+		} catch (NoSuchPaddingException e1){
 			e1.printStackTrace();
-		} catch (InvalidKeyException e)
-		{
+		} catch (InvalidKeyException e){
 			e.printStackTrace();
 		}
 		
-		try
-		{
+		try{
 			dec = cipher.doFinal(data);
-		} catch (IllegalBlockSizeException | BadPaddingException e)
-		{
+		} catch (IllegalBlockSizeException | BadPaddingException e){
 			e.printStackTrace();
 		}
 		return dec;
