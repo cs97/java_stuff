@@ -31,7 +31,7 @@ public class StreamCipher {
 			e.printStackTrace();
 		}
 	}
-	static CipherOutputStream OuntEnc(OutputStream b) {
+	static CipherOutputStream OutEnc(OutputStream b) {
 		try {
 			Cipher cipher = Cipher.getInstance("AES");
 			cipher.init(Cipher.ENCRYPT_MODE, secretKey);		
