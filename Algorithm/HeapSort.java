@@ -16,9 +16,7 @@ public class HeapSort {
 				}else son=2*j;
 			}
 			if(S[son-1] < (S[j-1])) {
-				int tmp=S[j-1];
-				S[j-1]=S[son-1];
-				S[son-1]=tmp;
+				swap(S, j-1, son-1);
 				j=son;
 			}else endloop=true;
 		}
@@ -29,24 +27,18 @@ public class HeapSort {
 		int n=S.length;
 		for(int i=n/2; i>=1; i--) reheap(S, i, n);
 		for(int i=n; i>=2; i--) {
-			int tmp=S[1-1];
-			S[1-1]=S[i-1];
-			S[i-1]=tmp;
+			swap(S, 0, i-1);
 			reheap(S, 1, i-1);
 		}
 			
 	}
-	
-	public static void main(String[] args) {
-		
-		int data[] = {1,4,1,4,2,1,3,5,6,2};
-		System.out.println("input");
-		System.out.println(Arrays.toString(data));
-
-		heapSort(data);
-		System.out.println("output");
-		System.out.println(Arrays.toString(data));
-
-		
+	private static void swap(int[] S, int one, int two) {
+		int tmp=S[one];
+		S[one]=S[two];
+		S[two]=tmp;
 	}
+	
+	
+	
+	
 }
